@@ -8,7 +8,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.browser = QWebEngineView()
-        self.browser.setUrl(QUrl('http://google.com'))
+        self.browser.setUrl(QUrl('https://cse.google.com/cse?cx=2608b54ce3e382a46'))
         self.setCentralWidget(self.browser)
         self.showMaximized()
 
@@ -39,7 +39,7 @@ class MainWindow(QMainWindow):
         self.browser.urlChanged.connect(self.update_url)
 
     def navigate_home(self):
-        self.browser.setUrl(QUrl('http://programming-hero.com'))
+        self.browser.setUrl(QUrl('https://sites.google.com/view/speedllc/home'))
 
     def navigate_to_url(self):
         url = self.url_bar.text()
@@ -50,6 +50,6 @@ class MainWindow(QMainWindow):
 
 
 app = QApplication(sys.argv)
-QApplication.setApplicationName('My Cool Browser')
+QApplication.setApplicationName('Speed')
 window = MainWindow()
-app.exec_()
+speed.exec_()
